@@ -30,4 +30,10 @@ function changeSlide(n) {
    currentSlide = (currentSlide + n + images.length) % images.length;
    images[currentSlide].classList.add("active");
 }
- 
+
+document.getElementById("galleryModal").addEventListener("click", function (event) {
+   const content = document.querySelector(".gallery-content");
+   if (!content.contains(event.target)) {
+       closeModal();
+   }
+});
