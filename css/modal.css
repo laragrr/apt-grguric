@@ -62,4 +62,7 @@
    font-weight: bold;
    cursor: pointer;
 }
- 
+
+.gallery-thumb {
+   cursor: pointer;
+}

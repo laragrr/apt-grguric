@@ -35,6 +35,10 @@ body {
 }
 body {
   background-image: url("images/kuca.jpg");
+  background-size: cover;          
+  background-repeat: no-repeat;    
+  background-position: center;     
+  background-attachment: fixed;
   font: 16px/1.6 'Raleway', Arial, Helvetica, sans-serif;
   /* color: #fff; */
   text-align:center;
