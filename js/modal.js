@@ -1,8 +1,8 @@
 // js/modal.js
 const imageGroups = {
-   'A': ['images/apt-A.jpg', 'images/apt-A-2.jpg', 'images/apt-A-3.jpg'],
-   'B': ['images/apt-B.jpg', 'images/apt-B-2.jpg'],
-   'C': ['images/studio.jpg', 'images/studio-2.jpg']
+   'A': ['images/apt-A.jpg', 'images/apt-A-2.jpg', 'images/apt-A-3.jpg', 'images/apt-A-1.jpeg',  'images/apt-a-5.jpeg', 'images/apt-a-6.jpeg', 'images/apt-a-7.jpeg', 'images/apt-a-8.jpeg'],
+   'B': [ 'images/apt-b-1.jpeg','images/apt-B-2.jpg',  'images/apt-b-2.jpeg', 'images/apt-b-3.jpeg', 'images/apt-b-4.jpeg', 'images/apt-b-5.jpeg'],
+   'C': ['images/studio.jpg', 'images/studio-2.jpg', 'images/apt-c-1.jpeg', 'images/apt-c-2.jpeg', 'images/apt-c-3.jpeg'],
 };
 
 let currentSlide = 0;
@@ -53,4 +53,29 @@ document.getElementById("galleryModal").addEventListener("click", function (even
    if (!content.contains(event.target)) {
        closeModal();
    }
+});
+
+document.addEventListener('keydown', (event) => {
+    const modal = document.getElementById("galleryModal");
+    if (!modal.classList.contains("show")) return;
+
+    if (event.key === "ArrowRight") {
+        currentSlide = (currentSlide + 1) % currentImages.length;
+    } else if (event.key === "ArrowLeft") {
+        currentSlide = (currentSlide - 1 + currentImages.length) % currentImages.length;
+    }
+
+    const images = modal.querySelectorAll("img");
+    images.forEach((img, index) => {
+        img.classList.toggle('active', index === currentSlide);
+    });
+});
+
+document.addEventListener('keydown', (event) => {
+    const modal = document.getElementById("galleryModal");
+    if (!modal.classList.contains("show")) return;
+
+    if (event.key === "Escape") {
+         closeModal();
+    } 
 });
