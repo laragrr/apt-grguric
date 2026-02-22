@@ -34,13 +34,12 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 body {
-  background-image: url("images/kuca.jpg");
   background-size: cover;          
   background-repeat: no-repeat;    
   background-position: center;     
   background-attachment: fixed;
   font: 16px/1.6 'Raleway', Arial, Helvetica, sans-serif;
-  /* color: #fff; */
+  color: #fff;
   text-align:center;
   /* background: #222; */
 }
@@ -97,6 +96,7 @@ h6 {
   margin: 0 0 20px;
   font-weight: 600;
   text-transform:uppercase;
+  color: #fff;
 }
 h1,
 h2 {
@@ -145,7 +145,7 @@ video {
 }
 #video:after {
   content: '';
-  opacity: 0.6;
+  opacity: 0.8;
   background: #4096ee; /* Old browsers */
   background: -moz-linear-gradient(top, #4096ee 0%, #39ced6 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top, #4096ee 0%,#39ced6 100%); /* Chrome10-25,Safari5.1-6 */
@@ -164,6 +164,18 @@ video {
 }
 .section-inner {
   padding:20px 30px 0;
+}
+.section[data-section="slide03"] .section-inner {
+  padding-top: 120px;
+}
+.section[data-section="slide06"] .section-inner {
+  padding-top: 120px;
+}
+.section[data-section="slide07"] .section-inner {
+  padding-top: 120px;
+}
+.section[data-section="slide05"] .section-inner {
+  padding-top: 120px;
 }
 .fp-scrollable {
   height:calc(100vh - 200px) !important;
@@ -415,6 +427,7 @@ a#logo {
   font-weight: 300;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  color: #fff;
 }
 .welcome-box p {
   max-width: 620px;
@@ -427,6 +440,7 @@ a#logo {
   font-size: 120px;
   margin-bottom: 10px;
   letter-spacing:0.02em;
+  color: #fff;
 }
 .welcome-title span {
   font-size:36px;
@@ -474,16 +488,19 @@ a#logo {
   margin-top: 80px;
   text-align:left;
   line-height:1.8;
+  color: #fff;
 }
 .about-contentbox span {
   font-size: 24px;
   text-transform: uppercase;
   font-weight: 300;
+  color: #fff;
 }
 .about-contentbox h2 {
   font-size: 32px;
   text-transform: uppercase;
   font-weight: 700;
+  color: #fff;
 }
 .facts-list {
   margin-top: 30px;
@@ -533,6 +550,7 @@ a#logo {
   font-size: 24px;
   text-transform: uppercase;
   font-weight: 300;
+  color: #fff;
 }
 .services-list .item {
   background-color: rgba(250,250,250,0.25);
@@ -549,10 +567,17 @@ a#logo {
   font-size:15px;
   padding:40px 20px;
   height:100%;
+  color: #fff;
 }
 .services-list .item:hover {
   background-color: #fff;
   color: #1e1e1e;
+}
+.services-list .item:hover h3 {
+  color: #000;
+}
+.services-list .item:hover p {
+  color: #000;
 }
 .service-box h3 {
   font-size:22px;
@@ -799,6 +824,7 @@ textarea.form-control {
 .testimonials-section .item p {
   font-size: 17px;
   font-style: italic;
+  color: #fff;
 }
 
 /*==============================================

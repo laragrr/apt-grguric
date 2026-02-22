@@ -171,6 +171,10 @@
             return false;
         }).on('click', '.navigation-menu > li > a', function() {
             $('.navbar-collapse').slideUp(300);
+            var anchor = $(this).attr('href').substring(1);
+            if (anchor) {
+                fullpage_api.moveTo(anchor);
+            }
         }).on('click', '.next-section', function() {
             fullpage_api.moveSectionDown();
         });
